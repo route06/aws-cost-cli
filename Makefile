@@ -29,3 +29,6 @@ lint:
 
 format:
 	pnpm format
+
+version:
+	pnpm exec node $(BUILD_DIR)/index.js --version

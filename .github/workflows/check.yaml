@@ -21,11 +21,14 @@ jobs:
           node-version-file: '.node-version'
           cache: 'pnpm'
 
-      - name: Install dependencies
-        run: make install
+      - name: Install dependencies & build application
+        run: make
 
       - name: Lint & format
         run: make lint
 
       - name: Run tests
         run: make test
+
+      - name: Confirm no error
+        run: make version
