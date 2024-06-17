@@ -1,7 +1,7 @@
 import AWS from 'aws-sdk';
 import dayjs from 'dayjs';
-import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
-import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter.js';
+import isSameOrBefore from 'dayjs/plugin/isSameOrBefore.js';
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isSameOrBefore);
 import { AWSConfig } from './config';
