@@ -11,6 +11,11 @@ const costDataLength = 65;
 const fixedToday = '2024-05-11'; // cost of 'this month' will be sum of 10 days from May 1 to May 10 ('today' is omitted because its cost is incomplete)
 const fixedFirstDay = dayjs(fixedToday).subtract(costDataLength, 'day');
 
+jest.mock('./logger', () => ({
+  ...jest.requireActual('./logger'),
+  showSpinner: jest.fn(),
+}));
+
 describe('Cost Functions', () => {
   beforeAll(() => {
     AWSMock.setSDKInstance(AWS);

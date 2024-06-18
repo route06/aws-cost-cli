@@ -17,6 +17,11 @@ const awsConfig: AWSConfig = {
   region: 'us-east-1',
 };
 
+jest.mock('../logger', () => ({
+  ...jest.requireActual('../logger'),
+  showSpinner: jest.fn(),
+}));
+
 const mockedCostByService = generateMockedCostByService(
   fixedToday,
   costDataLength,

@@ -8,6 +8,11 @@ import { AWSConfig } from './config';
 import { mockClient } from 'aws-sdk-client-mock';
 import AWSMock from 'aws-sdk-mock';
 
+jest.mock('./logger', () => ({
+  ...jest.requireActual('./logger'),
+  showSpinner: jest.fn(),
+}));
+
 describe('getAccountAlias', () => {
   const organizationsMock = mockClient(OrganizationsClient);
 
