@@ -6,6 +6,8 @@
 
 ## Installation
 
+Use a supported Node.js release with current security patches. For Node.js 22, use 22.23.5 or later.
+
 Install the package globally or alternatively you can also use `npx`
 
 ```bash
